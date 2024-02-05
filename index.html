@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chatbot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="suggestions">
+            <button class="suggestion-btn">How's the weather?</button>
+            <button class="suggestion-btn">Tell me a joke.</button>
+            <button class="suggestion-btn">What can you do?</button>
+            <button class="suggestion-btn">Write me a 500 word Essay about Hackathon?</button>
+            <button class="suggestion-btn">Write me a news article about the increase in GST in Singapore?</button>
+            <!-- Add more suggestions as needed -->
+        </div>
+        <div id="ai-avatar-container">
+            <div class="ai-avatar"></div>
+            <p class="ai-greeting">Hi, how may I help you?</p>
+        </div>
+        <div id="chat-box"></div>
+        <div id="input-area">
+            <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
